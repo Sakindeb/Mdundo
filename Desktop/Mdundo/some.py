@@ -4,6 +4,9 @@ from selenium.webdriver.common.by import By
 
 # Specify the path to your WebDriver executable (e.g., chromedriver.exe)
 chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu') 
 # Create a new instance of the Chrome driver
 driver = webdriver.Chrome(options=chrome_options)
 
